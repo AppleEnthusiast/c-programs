@@ -6,10 +6,15 @@ die Funktion printf.
 */
 
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
 
- printf("Hello, World!\n");
+ char name[10] = "Teo";
 
+ printf("Hello, World!\n");
+ printf("Hello, %s!. Nice to see you. You are a wonderful guy.", name);
+
+ printf("\n");
  return 0;
 }

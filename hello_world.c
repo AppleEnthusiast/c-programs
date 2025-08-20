@@ -10,10 +10,14 @@ die Funktion printf.
 
 int main(void) {
 
- char name[10] = "Teo";
+ char name[10];
 
  printf("Hello, World!\n");
- printf("Hello, %s!. Nice to see you. You are a wonderful guy.", name);
+
+ printf("Enter your name: ");
+ scanf("%s",name);
+
+ printf("Hello, %s! Nice to see you. You are a wonderful guy.", name);
 
  printf("\n");
  return 0;

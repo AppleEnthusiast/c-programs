@@ -22,7 +22,8 @@ void showMenu() {
     scanf("%c", &choice);
 
     if (choice == 'a') {
-        printf("You selected: short");
+        printf("You selected: short\n");
+		printf("%d / %d\n", SHRT_MIN, SHRT_MAX);
     } else if (choice == 'b') {
         printf("You selected: int");
     } else if (choice == 'c') {

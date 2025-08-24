@@ -19,17 +19,22 @@ void showMenu() {
     printf("-------------------------------------------------\n");	
 
     char choice = '\0';
-    scanf("%c", &choice);
+    scanf(" %c", &choice);   // with space to ignore '\n' in buffer
 
     if (choice == 'a') {
         printf("You selected: short\n");
-		printf("%d / %d\n", SHRT_MIN, SHRT_MAX);
+        printf("signed: %d / %d\n", SHRT_MIN, SHRT_MAX);
+        printf("unsigned: 0 / %u\n", USHRT_MAX);
     } else if (choice == 'b') {
-        printf("You selected: int");
+        printf("You selected: int\n");
+        printf("signed: %d / %d\n", INT_MIN, INT_MAX);
+        printf("unsigned: 0 / %u\n", UINT_MAX);
     } else if (choice == 'c') {
-        printf("You selected: long");
+        printf("You selected: long\n");
+        printf("signed: %ld / %ld\n", LONG_MIN, LONG_MAX);
+        printf("unsigned: 0 / %lu\n", ULONG_MAX);
     } else {
-        printf("Invalid option");
+        printf("Invalid option\n");
     }
 }
 

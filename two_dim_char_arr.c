@@ -9,10 +9,18 @@ int main(void) {
  printf("type three names:\n");
 
  int i = 0;
+ char * p = NULL;
 
  for(i=0;i<MAX;i++) {
 	printf("%d. name: ",i+1);
-	scanf("%s",names[i]);
+	if(fgets(names[i], sizeof names[i],stdin)){
+		for(p = names[i];*p;++p){
+			if(*p == '\n'){
+				*p = '\0';
+				break;
+			}
+		}	
+	}
  }
 
  printf("the names you gave as input:\n");

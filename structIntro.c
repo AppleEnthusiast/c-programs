@@ -7,6 +7,10 @@ struct Student {
  float grade;
 }
 int main(void){
+ struct Student student1;
+
+ printf("Enter student's name: ");
+ fgets(student1.name, 50, stdin);
 
  printf("\n");
  return 0;
